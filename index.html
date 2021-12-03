@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" src="./src/js/index.js"></script>
+    <title>Blogr landing page</title>
+  </head>
+  <body class="font-overpass overflow-x-hidden">
+    <div class="wrapper">
+      <section
+        id="hero"
+        class="
+          flex flex-col
+          justify-center
+          pt-10
+          px-[5vw]
+          desktop:px-[10vw]
+          overflow-hidden
+          relative
+          bg-gradient-to-r
+          from-gradient-hero-very-light-red
+          to-gradient-hero-light-red
+          min-h-[70vh]
+          rounded-bl-[6rem]
+        "
+      >
+        <img
+          class="
+            desktop:hidden
+            absolute
+            scale-[4]
+            translate-y-[0%] translate-x-[28%]
+            h-full
+          "
+          src="src/assets/images/bg-pattern-intro-mobile.svg"
+          alt=""
+        />
+        <img
+          class="
+            hidden
+            desktop:block
+            absolute
+            translate-y-[-00%] translate-x-[20%]
+            h-full
+            w-full
+            object-cover
+            scale-[1.9]
+          "
+          src="src/assets/images/bg-pattern-intro-desktop.svg"
+          alt=""
+        />
+        <header class="z-10 relative flex justify-between items-center mb-auto">
+          <a href="index.html"
+            ><img
+              class="w-[70%] desktop:w-full"
+              src="src/assets/images/logo.svg"
+              alt=""
+          /></a>
+          <ul
+            class="
+              hidden
+              desktop:flex
+              text-white
+              font-ubuntu font-bold
+              gap-10
+              ml-20
+              mr-auto
+            "
+          >
+            <li
+              class="
+                hovers
+                hover1
+                hover:underline
+                cursor-pointer
+                text-lg
+                relative
+              "
+            >
+              Product
+            </li>
+
+            <li class="hovers hover2 hover:underline cursor-pointer text-lg">
+              Company
+            </li>
+            <li class="hovers hover3 hover:underline cursor-pointer text-lg">
+              Connect
+            </li>
+          </ul>
+          <div
+            class="
+              hidden
+              sub-nav1
+              z-50
+              absolute
+              bg-white
+              flex flex-col
+              text-[#000]
+              font-overpass font-light
+              desktop:bottom-[-400%]
+              big-desktop:left-[9%]
+              desktop:left-[14%]
+              rounded-lg
+              py-5
+              px-10
+              gap-3
+            "
+          >
+            <a class="hover:font-bold" href="#">Overview</a>
+            <a class="hover:font-bold" href="#">Pricing</a>
+            <a class="hover:font-bold" href="#">Marketplace</a>
+            <a class="hover:font-bold" href="#">Features</a>
+            <a class="hover:font-bold" href="#">Integrations</a>
+          </div>
+          <div
+            class="
+              hidden
+              sub-nav2
+              z-50
+              absolute
+              bg-white
+              flex flex-col
+              text-[#000]
+              font-overpass font-light
+              desktop:bottom-[-330%]
+              big-desktop:left-[22%]
+              desktop:left-[28%]
+              rounded-lg
+              py-5
+              px-10
+              gap-3
+            "
+          >
+            <a class="hover:font-bold" href="#">About</a>
+            <a class="hover:font-bold" href="#">Team</a>
+            <a class="hover:font-bold" href="#">Blog</a>
+            <a class="hover:font-bold" href="#">Careers</a>
+          </div>
+          <div
+            class="
+              hidden
+              sub-nav3
+              z-50
+              absolute
+              bg-white
+              flex flex-col
+              text-[#000]
+              font-overpass font-light
+              bottom-[-255%]
+              big-desktop:left-[30%]
+              desktop:left-[42%]
+              rounded-lg
+              py-5
+              px-10
+              gap-3
+            "
+          >
+            <a class="hover:font-bold" href="#">Contact</a>
+            <a class="hover:font-bold" href="#">Newsletter</a>
+            <a class="hover:font-bold" href="#">Linkedin</a>
+          </div>
+          <ul>
+            <a href="#">
+              <img
+                class="desktop:hidden hamburger-icon"
+                src="src/assets/images/icon-hamburger.svg"
+                alt=""
+              />
+            </a>
+            <div
+              class="
+                hamburger-menu
+                fixed
+                bg-white
+                w-[90%]
+                mx-auto
+                left-[5%]
+                top-[10%]
+                h-[80vh]
+                shadow-2xl
+                desktop:hidden
+                font-bold font-overpass
+                pt-10
+                flex flex-col
+                justify-between
+                z-50
+                hidden
+              "
+            >
+              <div class="links flex-col flex gap-10 text-center items-center">
+                <a class="mobile-menu-nav productmenu" href="#">Product</a>
+                <div
+                  class="
+                    product-active
+                    hidden
+                    flex flex-col
+                    bg-nav-gray
+                    py-5
+                    gap-5
+                    w-[90%]
+                  "
+                >
+                  <a href="#">Contact</a>
+                  <a href="#">Newsletter</a>
+                  <a href="#">Linkedin</a>
+                </div>
+                <a class="mobile-menu-nav companymenu" href="#">Company</a>
+                <div
+                  class="
+                    company-active
+                    hidden
+                    flex flex-col
+                    bg-nav-gray
+                    py-5
+                    gap-5
+                    w-[90%]
+                  "
+                >
+                  <a href="#">About</a>
+                  <a href="#">Team</a>
+                  <a href="#">Blog</a>
+                  <a href="#">Careers</a>
+                </div>
+                <a class="mobile-menu-nav connectmenu" href="#">Connect</a>
+                <div
+                  class="
+                    connect-active
+                    hidden
+                    flex flex-col
+                    bg-nav-gray
+                    py-5
+                    gap-5
+                    w-[90%]
+                  "
+                >
+                  <a href="#">Contact</a>
+                  <a href="#">Newsletter</a>
+                  <a href="#">Linkedin</a>
+                </div>
+              </div>
+              <hr class="mt-auto mx-10 opacity-20" />
+              <div
+                class="
+                  ctas
+                  mb-auto
+                  mx-auto
+                  flex-col flex
+                  text-center
+                  gap-5
+                  mt-10
+                "
+              >
+                <a class="" href="#">Login</a>
+                <a
+                  class="
+                    mb-20
+                    bg-gradient-to-r
+                    from-gradient-hero-very-light-red
+                    to-gradient-hero-light-red
+                    text-white
+                    py-3
+                    px-10
+                    rounded-full
+                  "
+                  href="#"
+                  >Sign up</a
+                >
+              </div>
+            </div>
+            <a
+              class="
+                hidden
+                desktop:inline-block
+                font-ubuntu font-bold
+                text-lg text-white
+              "
+              href="#"
+              >Log in
+            </a>
+            <a
+              class="
+                hidden
+                desktop:inline-block
+                font-ubuntu font-bold
+                text-lg text-light-red-cta-text
+                bg-white
+                py-3
+                px-10
+                ml-10
+                rounded-full
+                hover:bg-opacity-20 hover:text-white
+                transition-all
+              "
+              href="#"
+              >Sign up</a
+            >
+          </ul>
+        </header>
+        <main class="relative main-hero-content mb-auto text-white text-center">
+          <h1 class="text-3xl font-bold mb-5 desktop:text-7xl">
+            A modern <br class="desktop:hidden" />
+            publishing platform
+          </h1>
+          <p class="font-ubuntu mb-10 desktop:mb-20 desktop:text-xl">
+            Grow your audience and build your online brand.
+          </p>
+          <div class="ctas flex items-center justify-center gap-5">
+            <a
+              class="
+                bg-white
+                py-2
+                px-8
+                desktop:py-4 desktop:px-10
+                rounded-full
+                text-light-red-cta-text
+                font-ubuntu font-bold
+                hover:bg-opacity-20 hover:text-white
+                transition-all
+              "
+              href="#"
+              >start for free</a
+            >
+            <a
+              class="
+                border-white border-2
+                py-2
+                px-8
+                desktop:py-4 desktop:px-10
+                rounded-full
+                font-ubuntu font-bold
+                hover:bg-white hover:text-light-red-cta-text
+                transition-all
+              "
+              href="#"
+              >learn more</a
+            >
+          </div>
+        </main>
+      </section>
+      <section class="text-center desktop:text-left" id="features">
+        <h1
+          class="
+            px-[5vw]
+            desktop:px-[10vw]
+            text-center
+            mt-20
+            desktop:mt-40
+            mb-10
+            text-2xl
+            desktop:text-6xl
+            font-bold
+            text-very-dark-blue-headings
+          "
+        >
+          Designed for the future
+        </h1>
+        <div
+          class="
+            content
+            desktop:flex desktop:items-center desktop:justify-between
+            px-[5vw]
+            desktop:px-[0vw] desktop:pl-[10vw]
+          "
+        >
+          <img
+            class="desktop:hidden w-full max-w-[25rem] mx-auto"
+            src="src/assets/images/illustration-editor-mobile.svg"
+            alt=""
+          />
+          <div
+            class="
+              img-container
+              desktop:order-2 desktop:w-1/2
+              translate-x-[30%]
+            "
+          >
+            <img
+              class="hidden desktop:block desktop:scale-[1.3]"
+              src="src/assets/images/illustration-editor-desktop.svg"
+              alt=""
+            />
+          </div>
+          <main class="desktop:w-1/2">
+            <div class="content1">
+              <h1
+                class="
+                  text-very-dark-blue-headings
+                  desktop:text-3xl desktop:w-full
+                  text-xl
+                  w-1/2
+                  mx-auto
+                  desktop:mx-0
+                  font-bold
+                  mt-10
+                  mb-5
+                "
+              >
+                Introducing an extensible editor
+              </h1>
+              <p
+                class="
+                  font-ubuntu
+                  desktop:text-lg
+                  text-very-dark-grayish-blue-body-copy
+                  w-[90%]
+                  desktop:w-[75%]
+                  mx-auto
+                  desktop:mx-0
+                "
+              >
+                blogr features an exceedingly intuitive interface which lets you
+                focus on one thing: creating content. The editor supports
+                management of multiple blogs and allows easy manipulation of
+                embeds such as images, videos, and markdown. Extensibility with
+                plugins and themes provide easy ways to add functionality or
+                change the looks of a blog
+              </p>
+            </div>
+            <div class="content2">
+              <h1
+                class="
+                  text-very-dark-blue-headings
+                  desktop:text-3xl desktop:w-full
+                  text-xl
+                  w-1/2
+                  mx-auto
+                  desktop:mx-0
+                  font-bold
+                  mt-10
+                  mb-5
+                "
+              >
+                Robust content management
+              </h1>
+              <p
+                class="
+                  font-ubuntu
+                  desktop:text-lg
+                  text-very-dark-grayish-blue-body-copy
+                  w-[90%]
+                  desktop:w-[75%]
+                  mx-auto
+                  desktop:mx-0
+                  mb-10
+                "
+              >
+                Flexible content management enales users to easily move through
+                posts. Increase the usability of your blog by adding customized
+                categories, section, format, or flow. with this functionality,
+                you're in full control.
+              </p>
+            </div>
+          </main>
+        </div>
+        <img
+          src="src/assets/images/illustration-phones.svg"
+          class="
+            absolute
+            max-w-[21rem]
+            left-1/2
+            -translate-x-1/2
+            z-50
+            translate-y-10
+            desktop:left-[25%] desktop:translate-y-[70%] desktop:scale-[2]
+          "
+          alt=""
+        />
+      </section>
+      <section
+        class="
+          px-[5vw]
+          desktop:px-[10vw]
+          mt-48
+          bg-gradient-to-b
+          from-gradient-body-dark-blue
+          to-gradient-body-desaturated-dark-blue
+          relative
+          text-white text-center
+          rounded-bl-[6rem] rounded-tr-[6rem]
+          overflow-hidden
+          desktop:flex desktop:items-center desktop:justify-between
+        "
+        id="infrastructure"
+      >
+        <img
+          class="
+            absolute
+            left-1/2
+            -translate-x-1/2 -translate-y-1/2
+            max-w-[30rem]
+            desktop:translate-x-[-10%]
+            desktop:translate-y-[-50%]
+            desktop:static
+            desktop:scale-[2.5]
+          "
+          src="src/assets/images/bg-pattern-circles.svg"
+          alt=""
+        />
+        <main
+          class="desktop:z-20 desktop:ml-10 desktop:text-left desktop:w-1/2"
+        >
+          <h1
+            class="
+              text-2xl
+              desktop:text-5xl desktop:w-full
+              font-bold
+              w-1/2
+              mx-auto
+              desktop:mx-0
+              pt-52
+              desktop:pt-20
+              mb-5
+              desktop:mb-10
+            "
+          >
+            State of the Art infrastructure
+          </h1>
+          <p
+            class="
+              font-ubuntu
+              w-[90%]
+              desktop:w-[75%]
+              mx-auto
+              desktop:mx-0
+              pb-20
+              desktop:text-lg
+            "
+          >
+            With reliability and speed in mind, worldwide data centers provide
+            the backbone for ultra-fast connectivity. This ensures your site
+            will load instantly, no matter where your readers are, keeping your
+            site competitive
+          </p>
+        </main>
+      </section>
+
+      <section
+        class="px-[5vw] desktop:px-[10vw] text-center desktop:text-left my-72"
+        id="features2"
+      >
+        <div
+          class="
+            content
+            desktop:flex desktop:items-center desktop:justify-between
+            px-[5vw]
+            desktop:px-[0vw] desktop:pr-[5vw]
+          "
+        >
+          <img
+            class="desktop:hidden w-full scale-150 max-w-[25rem] mx-auto"
+            src="src/assets/images/illustration-laptop-mobile.svg"
+            alt=""
+          />
+          <div
+            class="img-container desktop:w-1/2 translate-x-[-45%] scale-[1.3]"
+          >
+            <img
+              class="hidden desktop:block desktop:scale-[1.3]"
+              src="src/assets/images/illustration-laptop-desktop.svg"
+              alt=""
+            />
+          </div>
+          <main class="desktop:w-1/2 big-desktop:ml-28">
+            <div class="content1">
+              <h1
+                class="
+                  text-very-dark-blue-headings
+                  desktop:text-3xl desktop:w-full
+                  text-xl
+                  w-1/2
+                  mx-auto
+                  desktop:mx-0
+                  font-bold
+                  mt-20
+                  mb-5
+                "
+              >
+                Free, Open, Simple
+              </h1>
+              <p
+                class="
+                  font-ubuntu
+                  desktop:text-lg
+                  text-very-dark-grayish-blue-body-copy
+                  w-[90%]
+                  desktop:w-full
+                  big-desktop:w-[90%]
+                  mx-auto
+                  desktop:mx-0
+                "
+              >
+                blogr is a free open source application backed by a large
+                community of helpful developers. it supports features such as
+                code syntax highlighting. RSS feeds. social media integration.
+                third-party commenting tools. and works seamlessly with google
+                analytics. the architecture is clean and is relatively easy to
+                learn.
+              </p>
+            </div>
+            <div class="content2">
+              <h1
+                class="
+                  text-very-dark-blue-headings
+                  desktop:text-3xl desktop:w-full
+                  text-xl
+                  w-1/2
+                  mx-auto
+                  desktop:mx-0
+                  font-bold
+                  mt-10
+                  mb-5
+                "
+              >
+                Powerfull tooling
+              </h1>
+              <p
+                class="
+                  font-ubuntu
+                  desktop:text-lg
+                  text-very-dark-grayish-blue-body-copy
+                  w-[90%]
+                  big-desktop:w-[90%]
+                  desktop:w-full
+                  mx-auto
+                  desktop:mx-0
+                  mb-10
+                "
+              >
+                Batteries included. We built a simple and straightforward CLI
+                tool that makes customization and deployment a breeze. but
+                capable of producing even the most complicated sites.
+              </p>
+            </div>
+          </main>
+        </div>
+      </section>
+      <footer
+        class="
+          px-[5vw]
+          bg-very-dark-black-blue-footer-bg
+          rounded-tr-[6rem]
+          text-center
+          desktop:text-left
+          text-white
+          desktop:flex desktop:items-start desktop:justify-around desktop:py-20
+        "
+        id="footer"
+      >
+        <a
+          class="
+            block
+            pt-10
+            desktop:pt-0
+            pb-20
+            mt-20
+            desktop:ml-[5vw]
+            big-desktop:ml-[10vw]
+            desktop:mt-0
+          "
+          href="index.html"
+          ><img class="mx-auto" src="src/assets/images/logo.svg" alt=""
+        /></a>
+        <nav
+          class="
+            desktop:flex desktop:items-start desktop:mr-auto desktop:ml-[10vw]
+            gap-60
+          "
+        >
+          <ul class="Products">
+            <h1 class="mb-8 desktop:mb-0 font-ubuntu font-bold text-lg">
+              Product
+            </h1>
+            <a class="block py-1 font-ubuntu font-normal" href="#">Overview</a>
+            <a class="block py-1 font-ubuntu font-normal" href="#">Pricing</a>
+            <a class="block py-1 font-ubuntu font-normal" href="#"
+              >Marketplace</a
+            >
+            <a class="block py-1 font-ubuntu font-normal" href="#">Features</a>
+            <a class="block py-1 font-ubuntu font-normal" href="#"
+              >Integrations</a
+            >
+          </ul>
+          <ul class="company">
+            <h1 class="mb-5 mt-10 desktop:mt-0 font-ubuntu font-bold text-lg">
+              Company
+            </h1>
+            <a class="block py-1 font-ubuntu font-normal" href="#">About</a>
+            <a class="block py-1 font-ubuntu font-normal" href="#">Team</a>
+            <a class="block py-1 font-ubuntu font-normal" href="#">Blog</a>
+            <a class="block py-1 font-ubuntu font-normal" href="#">Careers</a>
+          </ul>
+          <ul class="connect pb-20">
+            <h1 class="mb-5 mt-10 desktop:mt-0 font-ubuntu font-bold text-lg">
+              Connect
+            </h1>
+            <a class="block py-1 font-ubuntu font-normal" href="#">Contact</a>
+            <a class="block py-1 font-ubuntu font-normal" href="#"
+              >Newsletter</a
+            >
+            <a class="block py-1 font-ubuntu font-normal" href="#">Linkedin</a>
+          </ul>
+        </nav>
+      </footer>
+    </div>
+  </body>
+</html>

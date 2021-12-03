@@ -1,0 +1,8 @@
+.hovers::after {
+  content: url("../assets/images/icon-arrow-light.svg");
+  margin-left: 0.5rem;
+}
+.mobile-menu-nav::after {
+  content: url("../assets/images/icon-arrow-dark.svg");
+  margin-left: 0.5rem;
+}

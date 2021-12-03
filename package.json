@@ -1,0 +1,16 @@
+{
+  "name": "project11-blogr-landing-page",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "devDependencies": {
+    "cssnano": "^5.0.12",
+    "postcss": "^8.4.4",
+    "sass": "^1.44.0",
+    "tailwindcss": "^2.2.19",
+    "vite": "^2.6.4"
+  }
+}
